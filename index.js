@@ -10,6 +10,29 @@ app.use((req, res, next) => {
   console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
   next();
 });
+app.post('/api/login', (req, res) => {
+  const { username } = req.body;
+  const myServer = "https://hasan-mohammad.onrender.com";
+
+  res.json({
+    "code": 0,
+    "message": "success",
+    "data": {
+      "access_token": "eyJ0eXAiOiJqd3QifQ.eyJzdWIiOiIxIiwiaXNzIjoiaHR0cDpcL1wvOiIsImV4cCI6MzA1MDIyODAxOCwiaWF0IjoxNzg4Nzg4MDE4LCJuYmYiOjE3ODg3ODgwMTgsInVpZCI6NDgwMzkzMiwicyI6IkljTjJXMSIsImp0aSI6ImQ4Njg0YTFmYzZjZWQ0MGQ3Y2UxYWJlMmI1MjcwYzJlIn0.KZwpE7mJuJkjmgYz268vNoTJO5yhQVi_Iq1OYlTSD08",
+      "token_type": "Bearer",
+      "goloToken": "B2EAB7D45D13B349482F54047E13A906o50w",
+      "cc": "505371899",
+      "user_id": 4803932,
+      "name": username || "yfkhgfhh",
+      "contact_way": "",
+      "refresh_ttl": 604800,
+      "api_cloud": myServer,
+      "api_download": myServer,
+      "avatar": ""
+    },
+    "time": Math.floor(Date.now() / 1000)
+  });
+});
 
 // الصفحة الرئيسية للتأكد من عمل السيرفر
 app.get('/', (req, res) => {
