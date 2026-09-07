@@ -2899,14 +2899,14 @@ app.listen(port, () => {
         "softApplicableAreaId": 2,
         "lanType": "English",
         "lanId": "1001",
-        "availableEndTime": null
-      }
-    ],
-        "reset_select_number": 0,
-    "model_select_number": 0,
-    "softProductList": {
-        "s": 0
+            "availableEndTime": null
     }
+],
+"reset_select_number": 0,
+"model_select_number": 0,
+"softProductList": {
+    "s": 0
+}
 });
 
 
