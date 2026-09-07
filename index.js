@@ -2902,13 +2902,13 @@ app.listen(port, () => {
         "availableEndTime": null
       }
     ],
-    "reset_select_number": 0,
+        "reset_select_number": 0,
     "model_select_number": 0,
     "softProductList": {
-      "s": 0
+        "s": 0
     }
-  }
 });
+
 
 // مسار جلب إعدادات التطبيق وتوجيه الروابط إلى سيرفرك الخاص //
 app.get('/api/app_config', (req, res) => {
