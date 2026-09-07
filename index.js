@@ -2857,10 +2857,11 @@ app.get('/api/v2/device/getSoftwareList', (req, res) => {
       "s": 0
     }
   },
-  "code": 0,
-  "message": "success",
-  "time": 1788788908
-}); 
+          res.json({
+            code: 0,
+            message: "success"
+        });
+    });
 
 // الصفحة الرئيسية للتأكد من عمل السيرفر
 app.get('/', (req, res) => {
