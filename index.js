@@ -35,19 +35,16 @@ app.post('/api/login', (req, res) => {
 });
 
 app.get('/api/v2/device/getSoftwareList', (req, res) => {
-    // يمكنك قراءة القيم المرسلة من الرابط إذا أردت استخدامها
     const deviceSn = req.query.device_sn;
     const lanType = req.query.lan_type;
     const appType = req.query.app_type;
 
-    // ضع الرد هنا بالشكل الذي يتوقعه التطبيق
     res.json({
-        code: 0,
-        message: "success",
-        data: {
-            list: [
-                {
-                    softPackageID: "DEMO",
+        "code": 0,
+        "message": "success",
+        "data": [
+            {
+                "softPackageID": "DEMO",
                     softName: "Demo",
                     versionNo: "V10.66",
                     downloadLink: "https://downloadapp.mythinkcar.com/app_soft/DEMO/2/V10.66/Arabic/DEMO_THINKDIAG1_V10.66_AR.zip",
