@@ -12,7 +12,6 @@ app.use((req, res, next) => {
 });
 app.post('/api/login', (req, res) => {
   const { username } = req.body;
-  const myServer = "https://hasan-mohammad.onrender.com";
 
   res.json({
     "code": 0,
@@ -26,13 +25,15 @@ app.post('/api/login', (req, res) => {
       "name": username || "yfkhgfhh",
       "contact_way": "",
       "refresh_ttl": 604800,
-      "api_cloud": myServer,
-      "api_download": myServer,
+      "api_cloud": "https://hasan-mohammad.onrender.com",
+      "api_download": "https://hasan-mohammad.onrender.com",
       "avatar": ""
     },
-    "time": Math.floor(Date.now() / 1000)
+        "time": 1788788018
+
   });
 });
+
 
 // الصفحة الرئيسية للتأكد من عمل السيرفر
 app.get('/', (req, res) => {
