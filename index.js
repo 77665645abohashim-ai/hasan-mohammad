@@ -3298,10 +3298,7 @@ app.get('/api/v2/topics/list', (req, res) => {
               "id": 5265251,
               "name": "Afamaco2026",
               "avatar": ""
-            }
-                }
-            ]
-        }
+        
     });
 }); 
 app.use((req, res) => {
