@@ -3275,7 +3275,8 @@ app.get('/api/v2/topics/list', (req, res) => {
             "user": {
               "id": 3591729,
               "name": "engineerefetoboreaut",
-              "avatar":             "https://file.thinkcar.com/app_services/2023-08-16/20230816221443475649.png"
+                          "avatar": "https://file.thinkcar.com/app_services/2023-08-16/20230816221443475649.png",
+
             },
             "is_thumb": null,
             "user_member": {
