@@ -1,37 +1,46 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
-const apiRoutes = require('./routes/apiRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// 1. الوسيطات (Middlewares)
-app.use(cors()); // السماح بالاتصال الخارجي
-app.use(express.json()); // قراءة JSON
-app.use(morgan('dev')); // لتسجيل الطلبات في الـ Terminal
+// إعدادات الوسيطات الأساسية
+app.use(cors());
+app.use(express.json());
+app.use(morgan('dev'));
 
-// 2. المسارات الرئيسية (Routes)
-app.use('/api/v1', apiRoutes);
+// مسار تجريبي (GET) للتحقق من عمل السيرفر
+app.get('/', (req, res) => {
+    res.status(200).json({
+        success: true,
+        message: 'السيرفر يعمل وجاهز لاستقبال طلبات التطبيق!'
+    });
+});
 
-// 3. معالجة المسارات غير الموجودة (404 Not Found)
-app.use((req, res, next) => {
+// المسار المخصص لاستقبال طلبات التطبيق (POST)
+app.post('/api/data', (req, res) => {
+    const dataFromApp = req.body;
+    
+    // يمكنك معالجة البيانات هنا
+    console.log('البيانات المستلمة:', dataFromApp);
+
+    res.status(200).json({
+        success: true,
+        message: 'تم استلام البيانات بنجاح في السيرفر',
+        receivedData: dataFromApp
+    });
+});
+
+// معالجة المسارات غير الموجودة
+app.use((req, res) => {
     res.status(404).json({
         success: false,
-        message: 'عذراً، المسار المطلوب غير موجود على الخادم'
+        message: 'المسار غير موجود'
     });
 });
 
-// 4. معالجة الأخطاء العامة (Error Handling Middleware)
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).json({
-        success: false,
-        message: 'حدث خطأ داخلي في الخادم'
-    });
-});
-
-// 5. تشغيل السيرفر
+// تشغيل السيرفر
 app.listen(PORT, () => {
-    console.log(`🚀 Server is running cleanly on port ${PORT}`);
+    console.log(`🚀 Server running on port ${PORT}`);
 });
