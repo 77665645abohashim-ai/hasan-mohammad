@@ -8,6 +8,7 @@ const PORT = process.env.PORT || 3000;
 // إعدادات الوسيطات الأساسية
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true })); // لدعم قراءة بيانات نموذج تسجيل الدخول المرسلة من التطبيق
 app.use(morgan('dev'));
 
 // مسار التحقق الأساسي
@@ -18,7 +19,34 @@ app.get('/', (req, res) => {
     });
 });
 
-// مسار إعدادات التطبيق الذي يطلبه التطبيق (مع توجيه الروابط لسيرفرك)
+// 1. مسار تسجيل الدخول (POST /api/login)
+app.post('/api/login', (req, res) => {
+    const { user_name, password } = req.body;
+    
+    // يمكنك هنا طباعة البيانات المرسلة للاطلاع عليها
+    console.log('محاولة تسجيل دخول لـ:', user_name);
+
+    res.status(200).json({
+        data: {
+            "access_token": "eyJ0eXAiOiJqd3QifQ.eyJzdWIiOiIxIiwiaXNzIjoiaHR0cDpcL1wvOiIsImV4cCI6MzA1MDI4ODUzNSwiaWF0IjoxNzg4ODQ4NTM1LCJuYmYiOjE3ODg4NDg1MzUsInVpZCI6NDgwMzkzMiwicyI6InBobmFYciIsImp0aSI6ImQ3YTNmYWM1MzJhNjNmODlkMmVkNDEwZjlhYmM0YTlmIn0.8aYhNP83mCgk7vx1JgqnyWvgCnRiC43Q5z7mN_oPSQ8",
+            "token_type": "Bearer",
+            "goloToken": "A473277A8372D6D5C4B9C174678094F5pfvx",
+            "cc": "505371899",
+            "user_id": 4803932,
+            "name": user_name ? user_name.split('@')[0] : "yfkhgfhh",
+            "contact_way": "",
+            "refresh_ttl": 604800,
+            "api_cloud": "https://hasan-mohammad.onrender.com",
+            "api_download": "https://hasan-mohammad.onrender.com",
+            "avatar": ""
+        },
+        code: 0,
+        message: "success",
+        time: Math.floor(Date.now() / 1000)
+    });
+});
+
+// 2. مسار إعدادات التطبيق (GET /api/app_config)
 app.get('/api/app_config', (req, res) => {
     const myServer = 'https://hasan-mohammad.onrender.com';
 
