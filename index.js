@@ -1764,6 +1764,16 @@ app.get('/api/v2/device/getSoftwareList', (req, res) => {
         }
     });
 });
+app.get('/api/newAdvertise', (req, res) => {
+    res.json({
+        code: 10001,
+        message: "Some params does not exists![app_id]",
+        data: {
+            t: 1
+        },
+        time: Math.floor(Date.now() / 1000)
+    });
+});
 
 // معالجة المسارات غير الموجودة (404)
 app.use((req, res) => {
