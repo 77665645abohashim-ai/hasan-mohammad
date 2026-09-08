@@ -3335,11 +3335,24 @@ app.get('/api/v2/topics/list', (req, res) => {
                     }
                 },
                 {
+                                    {
                     "id": 54935,
                     "user_id": 2002951,
-                    "content": "Dear Diag+APP Family:\\n\\nNow we support the migration of your points in ThinkDiag+APP to the new Community+Diagnostic App with one click: After the DollarFix migration, we have a wealth of points redemption gifts. (For details, please check the pictures of this post.)\\n\\n📱 Every 1 points in ThinkDiag+ = 10 points in DollarFix+.\\n\\n📌 Migration steps:\\n1. Search and download \\"DollarFix+\\" in the app store (\\"Dollarfix\\" in the IOS Appstore);\\n2. Use the original ThinkDiag+ account to log in to Dollarfix directly -> Enter [Me] -> [Closed Beta"
+                    "content": `Dear Diag+APP Family:
+
+Now we support the migration of your points in ThinkDiag+APP to the new Community+Diagnostic App with one click: After the DollarFix migration, we have a wealth of points redemption gifts. (For details, please check the pictures of this post.)
+
+📱 Every 1 points in ThinkDiag+ = 10 points in DollarFix+.
+
+📌 Migration steps:
+1. Search and download "DollarFix+" in the app store ("Dollarfix" in the IOS Appstore);
+2. Use the original ThinkDiag+ account to log in to Dollarfix directly -> Enter [Me] -> [Closed Beta`
+                }
+            ]
+        }
     });
-});
+
+  
 app.use((req, res) => {
     res.status(404).json({
         success: false,
