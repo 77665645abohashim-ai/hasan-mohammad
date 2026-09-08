@@ -1774,6 +1774,16 @@ app.get('/api/newAdvertise', (req, res) => {
         time: Math.floor(Date.now() / 1000)
     });
 });
+app.get('/api/get/new_version', (req, res) => {
+    res.json({
+        data: {
+            t: 1
+        },
+        code: 0,
+        message: "success",
+        time: Math.floor(Date.now() / 1000)
+    });
+});
 
 // معالجة المسارات غير الموجودة (404)
 app.use((req, res) => {
