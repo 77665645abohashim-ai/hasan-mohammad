@@ -3347,12 +3347,12 @@ Now we support the migration of your points in ThinkDiag+APP to the new Communit
 📌 Migration steps:
 1. Search and download "DollarFix+" in the app store ("Dollarfix" in the IOS Appstore);
 2. Use the original ThinkDiag+ account to log in to Dollarfix directly -> Enter [Me] -> [Closed Beta`
-                }
+                                }
             ]
         }
     });
+});
 
-  
 app.use((req, res) => {
     res.status(404).json({
         success: false,
