@@ -3299,7 +3299,7 @@ app.get('/api/v2/topics/list', (req, res) => {
               "name": "Afamaco2026",
               "avatar": ""
             },
-                        ]
+               
         }
     });
  
