@@ -1728,7 +1728,7 @@ app.get('/api/v2/device/getSoftwareList', (req, res) => {
         "lanId": "1001",
         "availableEndTime": null
       },
-      {
+      
                         {
                     "id": 174,
                     "softName": "Luxgen",
