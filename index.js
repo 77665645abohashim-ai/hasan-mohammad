@@ -3336,7 +3336,7 @@ app.get('/api/v2/topics/list', (req, res) => {
             }
         ]
     }
-);
+});
 
 app.use((req, res) => {
     res.status(404).json({
