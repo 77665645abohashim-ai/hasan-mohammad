@@ -5,11 +5,22 @@ const morgan = require('morgan');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// تعطيل الـ Etag لجميع المسارات في السيرفر
+app.disable('etag');
+
 // إعدادات الوسيطات الأساسية
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); // لدعم قراءة بيانات نموذج تسجيل الدخول المرسلة من التطبيق
 app.use(morgan('dev'));
+
+// إجبار جميع الردود على عدم التخزين المؤقت لمنع ظهور حالة 304
+app.use((req, res, next) => {
+    res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '0');
+    next();
+});
 
 // مسار التحقق الأساسي
 app.get('/', (req, res) => {
