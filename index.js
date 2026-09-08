@@ -3299,29 +3299,17 @@ app.get('/api/v2/topics/list', (req, res) => {
               "name": "Afamaco2026",
               "avatar": ""
             },
-            "is_thumb": null,
-            "user_member": null
-          },
-          {
-            "user_member":null},{
-"id":36401,
-"commentable_id":54935,
-"commentable_type":"App\\Model\\ThinkPost",
-"user_id":5149955,
-"content":"I have tcbd6 model and I need to calibrate Toyota succee"
-}]
-}
-});
-});
-
-app.use((req,res)=>{
-res.status(404).json({
-success:false,
-message:'المسار غير موجود على سيرفرك'
-});
-});
-
-app.listen(PORT,()=>{
-console.log(`🚀 Server running on port ${PORT}`);
-});
+                        ]
+        }
+    });
  
+app.use((req, res) => {
+    res.status(404).json({
+        success: false,
+        message: 'المسار غير موجود على سيرفرك'
+    });
+});
+
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on port ${PORT}`);
+});
