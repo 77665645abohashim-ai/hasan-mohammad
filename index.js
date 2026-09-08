@@ -1764,24 +1764,14 @@ app.get('/api/v2/device/getSoftwareList', (req, res) => {
         }
     });
 });
-app.get('/api/newAdvertise', (req, res) => {
-    res.json({
-        code: 10001,
-        message: "Some params does not exists![app_id]",
-        data: {
-            t: 1
-        },
-        time: Math.floor(Date.now() / 1000)
-    });
-});
-
-            "app.use((req, res) => {
+app.use((req, res) => {
     res.status(404).json({
         success: false,
         message: "المسار غير موجود على سيرفرك"
     });
 });
 
+
 app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
+console.log(`🚀 Server running on port ${PORT}`);
 });
