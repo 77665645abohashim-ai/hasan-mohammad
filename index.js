@@ -3328,38 +3328,23 @@ app.get('/api/v2/topics/list', (req, res) => {
             "content": "I have tcbd6 model and I need to calibrate Toyota succeed 2018 CVT transmission how to buy software and use it through this my thinkcar tcbd6 please help ",
             "img": "",
             "thumb_count": 0,
-            "time": 1780971494,
-                                                                        "user": {
-                        "id": 5149955,
-                        "name": "User"
-                    }
-                },
-                {
-                                    {
-                    "id": 54935,
-                    "user_id": 2002951,
-                    "content": `Dear Diag+APP Family:
-
-Now we support the migration of your points in ThinkDiag+APP to the new Community+Diagnostic App with one click: After the DollarFix migration, we have a wealth of points redemption gifts. (For details, please check the pictures of this post.)
-
-📱 Every 1 points in ThinkDiag+ = 10 points in DollarFix+.
-
-📌 Migration steps:
-1. Search and download "DollarFix+" in the app store ("Dollarfix" in the IOS Appstore);
-2. Use the original ThinkDiag+ account to log in to Dollarfix directly -> Enter [Me] -> [Closed Beta`
-                                }
-            ]
-        }
-    });
-});
+                            "time": 1780971494,
+                "user": {
+                    "id": 5149955,
+                    "name": "User"
+                }
+            }
+        ]
+    }
+);
 
 app.use((req, res) => {
     res.status(404).json({
         success: false,
-        message: 'المسار غير موجود على سيرفرك'
+        message: "المسار غير موجود على سيرفرك"
     });
 });
 
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
-}); 
+});
