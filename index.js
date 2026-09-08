@@ -3262,44 +3262,8 @@ app.get('/api/v2/topics/list', (req, res) => {
             },
             "is_thumb": null,
             "user_member": null
-          },
-          {
-            "id": 36467,
-            "commentable_id": 54935,
-            "commentable_type": "App\\Model\\ThinkPost",
-            "user_id": 3591729,
-            "content": "pls my thinkdiag pro was working perfectly before my subscription got expired and was blocked but after I paid for the registration and reopened, it's stop communicating to vehicles ",
-            "img": "",
-            "thumb_count": 0,
-            "time": 1781691153,
-            "user": {
-              "id": 3591729,
-              "name": "engineerefetoboreaut",
-                          "avatar": "https://file.thinkcar.com/app_services/2023-08-16/20230816221443475649.png",
-
-            },
-            "is_thumb": null,
-            "user_member": {
-              "id": 94873,
-              "user_id": 3591729,
-              "expiration_time": 1813149336,
-              "is_perpetual": 0
-            }
-          },
-          {
-            "id": 36421,
-            "commentable_id": 54935,
-            "commentable_type": "App\\Model\\ThinkPost",
-            "user_id": 5265251,
-            "content": "The ",
-            "img": "",
-            "thumb_count": 0,
-            "time": 1781194236,
-            "user": {
-              "id": 5265251,
-                                  "name": "Afamaco2026",
-                    "avatar": ""
-                }
+          }
+          
             }
         ]
       }
