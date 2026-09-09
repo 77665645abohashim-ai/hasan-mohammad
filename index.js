@@ -124,7 +124,7 @@ app.get('/api/app_config', (req, res) => {
         ip: req.headers['x-forwarded-for'] || req.socket.remoteAddress || "127.0.0.1"
     });
 });
-app.get('/api/v2/device/getSoftwareList', (req, res) => {
+app.get('/api/v2/debice/Hassan eList', (req, res) => {
     res.json({
         data: {
             list: [
@@ -2133,6 +2133,12 @@ app.get('/api/notice/unread', (req, res) => {
         "message": "success",
         "time": 1788947673
     });
+});
+app.get('/api/v2/device/getSoftwareList', (req, res) => {
+    res.setHeader('Server', 'nginx');
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.status(200).json(carData);
 });
 
   app.use((req, res) => {
