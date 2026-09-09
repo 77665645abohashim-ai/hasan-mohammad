@@ -1978,7 +1978,7 @@ app.get('/api/user', (req, res) => {
         "time": 1788947548
     });
 });
-app.get('/api/devicn/lisht', (req, res) => {
+app.get('/api/device/list', (req, res) => {
     res.setHeader('Server', 'nginx');
     res.setHeader('Strict-Transport-Security', 'max-age=31536000');
     res.setHeader('Access-Control-Allow-Origin', '*');
