@@ -2148,8 +2148,8 @@ app.get('/api/device/list', (req, res) => {
                 {
                     "id": 2290614,
                     "device_type": 3,
-                    "device_sn": "979862374455",
-                    "real_device_sn": "979862374455",
+                    "device_sn": "979862374489",
+                    "real_device_sn": "979862374489",
                     "create_time": 1786629644,
                     "is_new_blue": 0,
                     "is_black": 0,
@@ -2195,7 +2195,7 @@ app.get('/api/v4/user/ga_push_data', (req, res) => {
                             "key_software_orders": 0
                         },
                         "strings": {
-                            "key_user_devices_1": "979862374455",
+                            "key_user_devices_1": "979862374489",
                             "key_user_devices_2": "N/A",
                             "key_user_devices_3": "N/A",
                             "key_user_device_erp_code": "N/A",
