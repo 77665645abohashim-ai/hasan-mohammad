@@ -1775,6 +1775,56 @@ app.get('/api/v2/device/getSoftwareList', (req, res) => {
         }
     });
 });
+app.get('/api/newAdvertise', (req, res) => {
+    res.status(200).json({
+        "code": 0,
+        "message": "success",
+        "time": Math.floor(Date.now() / 1000),
+        "data": {
+            "advertising": [
+                {
+                    "id": 56,
+                    "title": "免费试用推广",
+                    "route_type": 1,
+                    "img": [
+                        "https://thinkcar123.s3.us-west-1.amazonaws.com/admin-file/ad_images-16759058284533.png"
+                    ],
+                    "url": "",
+                    "sn_segment": [],
+                    "timing": 43200,
+                    "duration": 3,
+                    "interval": 0,
+                    "type": "1"
+                },
+                {
+                    "title": "默认广告",
+                    "route_type": 0,
+                    "img": [
+                        "https://thinkcar123.s3.us-west-1.amazonaws.com/images/512dd668d7a0b9544bc70609327c6877.jpeg"
+                    ],
+                    "timing": 43200,
+                    "duration": 3,
+                    "sn_segment": [],
+                    "options_id": 7,
+                    "url": "https://www.baidu.com",
+                    "interval": 0,
+                    "type": "2"
+                }
+            ],
+            "product": [],
+            "customized": {
+                "cc": "501526711",
+                "device_sn": "979860000004",
+                "token": "5D6B734968F331481D2AFB731C14494Brm0z"
+            },
+            "thinkeasy": "https://www.mythinkcar.com/",
+            "thinkdiag": "https://www.mythinkcar.com/",
+            "vip_url": "https://user.thinkcar.com/api/member/vip_url",
+            "gpt_url": "https://h5.mythinkcar.com/vueh5/other/gpt2",
+            "lamp_url": ""
+        }
+    });
+});
 
   app.use((req, res) => {
     res.status(404).json({
