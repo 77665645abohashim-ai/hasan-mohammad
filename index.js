@@ -1825,6 +1825,84 @@ app.get('/api/newAdvertise', (req, res) => {
         }
     });
 });
+app.get('/api/observer-users', (req, res) => {
+    res.setHeader('Server', 'nginx');
+    res.setHeader('Cache-Control', 'private, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '-1');
+    res.setHeader('X-RateLimit-Limit', '1200');
+    res.setHeader('X-RateLimit-Remaining', '1199');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    
+    res.status(200).json({
+        "code": 0,
+        "message": "",
+        "data": {
+            "users": [
+                3407523, 3056301, 3434039, 3006520, 3033630, 3461769, 
+                3723936, 3730279, 3701717, 3725471, 3750891, 3746548, 
+                3711151, 3561401, 3737098, 3749316, 3755283, 3746745, 
+                3756180, 3678265, 3741697, 3685642, 3750052, 3756527, 
+                3715488, 2013270, 3751370, 3752157, 3441538, 3726445, 
+                3097795, 3741001, 3714284, 3754819, 3759454, 3737963, 
+                3765494, 3728812, 3679798, 3729212, 3679798, 3196028, 
+                3692467, 3759728, 3366201, 3728127, 3801218, 3636869, 
+                2042181, 3155118, 3768728, 5136622
+            ]
+        },
+        "time": 1788941894
+    });
+});
+app.get('/api/get_fca_order_url', (req, res) => {
+    res.setHeader('Server', 'nginx');
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    
+    res.status(200).json({
+        "data": {
+            "url": "https://thinkcarpay.com/m/FCA_describe?logintype=androidapp&lang=ar&app_id=9053&theme=&sn=&token=Bearer+eyJ0eXAiOiJqd3QifQ.eyJzdWIiOiIxIiwiaXNzIjoiaHR0cDpcL1wvOiIsImV4cCI6MzA1MDI4ODUzNSwiaWF0IjoxNzg4ODQ4NTM1LCJuYmYiOjE3ODg4NDg1MzUsInVpZCI6NDgwMzkzMiwicyI6InBobmFYciIsImp0aSI6ImQ3YTNmYWM1MzJhNjNmODlkMmVkNDEwZjlhYmM0YTlmIn0.8aYhNP83mCgk7vx1JgqnyWvgCnRiC43Q5z7mN_oPSQ8&channel_type=1&channel=1&app_type=1&good_id=174&isNorthAmerica=false&identification=FCA_describe",
+            "ip": "150.228.11.224",
+            "continent": "亚洲"
+        },
+        "code": 0,
+        "message": "success",
+        "time": 1788941895
+    });
+});
+app.get('/api/userLog/config', (req, res) => {
+    res.setHeader('Server', 'nginx');
+    res.setHeader('Cache-Control', 'private, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '-1');
+    res.setHeader('X-RateLimit-Limit', '1200');
+    res.setHeader('X-RateLimit-Remaining', '1198');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    
+    res.status(200).json({
+        "code": 0,
+        "message": "",
+        "data": {
+            "is_open": 0
+        },
+        "time": 1788941894
+    });
+});
+app.post('/api/buried-point', (req, res) => {
+    res.setHeader('Server', 'nginx');
+    res.setHeader('Cache-Control', 'private, must-revalidate');
+    res.setHeader('Pragma', 'no-cache');
+    res.setHeader('Expires', '-1');
+    res.setHeader('X-RateLimit-Limit', '1200');
+    res.setHeader('X-RateLimit-Remaining', '1197');
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    res.status(429).json({
+        "code": 429,
+        "message": "Exceeded the maximum number of requests.",
+        "data": [],
+        "time": 1788941895
+    });
+});
 
   app.use((req, res) => {
     res.status(404).json({
