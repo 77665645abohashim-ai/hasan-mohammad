@@ -1801,6 +1801,18 @@ app.get('/api/v4/user/ga_push_data', (req, res) => {
         }
     });
 });
+app.get('/api/get_fca_order_url', (req, res) => {
+    res.status(200).json({
+        data: {
+            url: "https://thinkcarpay.com/m/FCA_describe?logintype=androidapp&lang=ar&app_id=&theme=&sn=&token=&channel_type=1&channel=1&app_type=1&good_id=174&isNorthAmerica=false&identification=FCA_describe",
+            ip: "209.198.132.92",
+            continent: "亚洲"
+        },
+        code: 0,
+        message: "success",
+        time: Math.floor(Date.now() / 1000)
+    });
+});
 
   app.use((req, res) => {
     res.status(404).json({
