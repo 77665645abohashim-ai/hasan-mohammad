@@ -1813,16 +1813,6 @@ app.get('/api/get_fca_order_url', (req, res) => {
         time: Math.floor(Date.now() / 1000)
     });
 });
-app.get('/api/get/new_version', (req, res) => {
-    res.status(200).json({
-        data: {
-            t: 1
-        },
-        code: 0,
-        message: "success",
-        time: Math.floor(Date.now() / 1000)
-    });
-});
 
   app.use((req, res) => {
     res.status(404).json({
