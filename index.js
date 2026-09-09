@@ -1775,13 +1775,13 @@ app.get('/api/v2/device/getSoftwareList', (req, res) => {
         }
     });
 });
-app.use((req, res) => {
+
+  app.use((req, res) => {
     res.status(404).json({
         success: false,
         message: "المسار غير موجود على سيرفرك"
-    });
+  });
 });
-
 
 app.listen(PORT, () => {
 console.log(`🚀 Server running on port ${PORT}`);
