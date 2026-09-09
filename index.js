@@ -2141,6 +2141,110 @@ app.get('/api/v2/dgvice/getSoftwareList', (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.status(200).json(carData);
 });
+app.get('/api/device/list', (req, res) => {
+    res.status(200).json({
+        "data": {
+            "list": [
+                {
+                    "id": 2290614,
+                    "device_type": 3,
+                    "device_sn": "979862374455",
+                    "real_device_sn": "979862374455",
+                    "create_time": 1786629644,
+                    "is_new_blue": 0,
+                    "is_black": 0,
+                    "sn_type": "0",
+                    "device_name": "THINKDIAG",
+                    "new_product": "0",
+                    "channelName": "电商,APP,美国",
+                    "packageName": "THINKDIAG",
+                    "downloadLink": "https://download.mythinkcar.com/productName/1690357133701/ThinkDiag.png"
+                }
+            ]
+        },
+        "code": 0,
+        "message": "success",
+        "time": Math.floor(Date.now() / 1000)
+    });
+});
+app.get('/api/v4/user/ga_push_data', (req, res) => {
+    res.status(200).json({
+        "data": {
+            "global": {
+                "ints": [],
+                "strings": {
+                    "user_id": "4803932",
+                    "key_user_name": "yfkhgfhh",
+                    "key_user_email": "jdhdjzdjjdv@gmail.com"
+                },
+                "floats": []
+            },
+            "initialize": [
+                {
+                    "event_name": "key_app_time",
+                    "event_params": {
+                        "ints": {
+                            "key_user_points": 7,
+                            "key_user_VIP_expiration_date": 0,
+                            "key_user_expiration_date": 0,
+                            "key_registration_duration": 341,
+                            "key_device_1_activation_duration": 28,
+                            "key_device_2_activation_duration": 0,
+                            "key_device_3_activation_duration": 0,
+                            "key_vip_orders": 0,
+                            "key_software_orders": 0
+                        },
+                        "strings": {
+                            "key_user_devices_1": "979862374455",
+                            "key_user_devices_2": "N/A",
+                            "key_user_devices_3": "N/A",
+                            "key_user_device_erp_code": "N/A",
+                            "key_devices_1_erp_code": "30000374",
+                            "key_devices_2_erp_code": "N/A",
+                            "key_devices_3_erp_code": "N/A"
+                        },
+                        "floats": {
+                            "key_vip_amount": 0,
+                            "key_software_amount": 0
+                        }
+                    }
+                },
+                {
+                    "event_name": "key_user_devices_info",
+                    "event_params": {
+                        "ints": {
+                            "key_device_1_is_pirate": 0,
+                            "key_device_2_is_pirate": 0,
+                            "key_device_3_is_pirate": 0
+                        },
+                        "strings": [],
+                        "floats": []
+                    }
+                }
+            ],
+            "custom": [
+                {
+                    "event_names": [
+                        "key_home_reports",
+                        "KEY_HOME_ALL_SYSTEM_DIAGNOSTIC"
+                    ],
+                    "event_params": {
+                        "ints": {
+                            "test_1": 1
+                        },
+                        "strings": {
+                            "string_test": "A1"
+                        },
+                        "floats": []
+                    }
+                }
+            ]
+        },
+        "code": 0,
+        "message": "success",
+        "time": Math.floor(Date.now() / 1000)
+    });
+});
 
   app.use((req, res) => {
     res.status(404).json({
