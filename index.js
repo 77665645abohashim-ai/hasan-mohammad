@@ -1775,6 +1775,14 @@ app.get('/api/v2/device/getSoftwareList', (req, res) => {
         }
     });
 });
+app.get('/api/notice/unread', (req, res) => {
+    res.status(200).json({
+        code: 200,
+        data: {
+            unreadCount: 0 // أو أي هيكل بيانات صحيح يتوقعه التطبيق
+        }
+    });
+});
 
   app.use((req, res) => {
     res.status(404).json({
