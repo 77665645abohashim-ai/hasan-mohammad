@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const carData = require('./car_data.json');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
