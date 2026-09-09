@@ -1793,6 +1793,14 @@ app.get('/api/newAdvertise', (req, res) => {
         time: Math.floor(Date.now() / 1000)
     });
 });
+app.get('/api/v4/user/ga_push_data', (req, res) => {
+    res.status(200).json({
+        code: 401,
+        data: {
+            error: "You are not authorized. Please sign in again."
+        }
+    });
+});
 
   app.use((req, res) => {
     res.status(404).json({
