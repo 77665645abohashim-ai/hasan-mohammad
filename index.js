@@ -1783,6 +1783,16 @@ app.get('/api/notice/unread', (req, res) => {
         }
     });
 });
+app.get('/api/newAdvertise', (req, res) => {
+    res.status(200).json({
+        code: 10001,
+        message: "Some params does not exists![app_id]",
+        data: {
+            t: 1
+        },
+        time: Math.floor(Date.now() / 1000)
+    });
+});
 
   app.use((req, res) => {
     res.status(404).json({
