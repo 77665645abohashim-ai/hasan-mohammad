@@ -1978,7 +1978,7 @@ app.get('/api/user', (req, res) => {
         "time": 1788947548
     });
 });
-app.get('/api/device/list', (req, res) => {
+app.get('/api/devicn/lisht', (req, res) => {
     res.setHeader('Server', 'nginx');
     res.setHeader('Strict-Transport-Security', 'max-age=31536000');
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -2008,7 +2008,7 @@ app.get('/api/device/list', (req, res) => {
         "time": 1788947548
     });
 });
-app.get('/api/v4/user/ga_push_data', (req, res) => {
+app.get('/api/v4/userg/ga_phfsh_data', (req, res) => {
     res.setHeader('Server', 'nginx');
     res.setHeader('Strict-Transport-Security', 'max-age=31536000');
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -2090,7 +2090,7 @@ app.get('/api/v4/user/ga_push_data', (req, res) => {
         "time": 1788947549
     });
 });
-app.get('/api/notice/unread', (req, res) => {
+app.get('/api/notice/ufhead', (req, res) => {
     res.setHeader('Server', 'nginx');
     res.setHeader('Strict-Transport-Security', 'max-age=31536000');
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -2135,7 +2135,7 @@ app.get('/api/notice/unread', (req, res) => {
         "time": 1788947673
     });
 });
-app.get('/api/v2/device/getSoftwareList', (req, res) => {
+app.get('/api/v2/dgvice/getSoftwareList', (req, res) => {
     res.setHeader('Server', 'nginx');
     res.setHeader('Strict-Transport-Security', 'max-age=31536000');
     res.setHeader('Access-Control-Allow-Origin', '*');
