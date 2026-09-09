@@ -1989,8 +1989,8 @@ app.get('/api/device/list', (req, res) => {
                 {
                     "id": 2290614,
                     "device_type": 3,
-                    "device_sn": "979862374455",
-                    "real_device_sn": "979862374455",
+                    "device_sn": "​979862374489",
+                    "real_device_sn": "​979862374489",
                     "create_time": 1786629644,
                     "is_new_blue": 0,
                     "is_black": 0,
@@ -2040,7 +2040,7 @@ app.get('/api/v4/user/ga_push_data', (req, res) => {
                             "key_software_orders": 0
                         },
                         "strings": {
-                            "key_user_devices_1": "979862374455",
+                            "key_user_devices_1": "​979862374489",
                             "key_user_devices_2": "N/A",
                             "key_user_devices_3": "N/A",
                             "key_user_device_erp_code": "N/A",
@@ -2103,7 +2103,7 @@ app.get('/api/notice/unread', (req, res) => {
                     "$oid": "6a33d124a8c3e077603234c7"
                 },
                 "id": 46874100,
-                "content": "Dear yfkhgfhh:\r\n\r\nThis is a kindly reminder that your device (979862374489) have 92 software (ASTONMARTIN, etc.) that are remaining validity period of 30 days. \r\n\r\nIn order not to affect your use, you can easily continue subscribing in the app.",
+                "content": "Dear yfkhgfhh:\r\n\r\nThis is a kindly reminder that your device (979862374455) have 92 software (ASTONMARTIN, etc.) that are remaining validity period of 30 days. \r\n\r\nIn order not to affect your use, you can easily continue subscribing in the app.",
                 "type": 4,
                 "cover": "",
                 "msg_title": "Software Expiration Reminder",
@@ -2111,7 +2111,7 @@ app.get('/api/notice/unread', (req, res) => {
                 "link_remark": "",
                 "attached": {
                     "push_notice_info": "4803932",
-                    "body": "Dear yfkhgfhh:\r\n\r\nThis is a kindly reminder that your device (979862374489) have 92 software (ASTONMARTIN, etc.) that are remaining validity period of 30 days. \r\n\r\nIn order not to affect your use, you can easily continue subscribing in the app.",
+                    "body": "Dear yfkhgfhh:\r\n\r\nThis is a kindly reminder that your device (979862374455) have 92 software (ASTONMARTIN, etc.) that are remaining validity period of 30 days. \r\n\r\nIn order not to affect your use, you can easily continue subscribing in the app.",
                     "title": "Software Expiration Reminder",
                     "type": "order",
                     "cover": "",
